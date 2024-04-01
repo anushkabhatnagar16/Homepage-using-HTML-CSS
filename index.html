@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <style>
+        /* body is here  */
+        
         /* Header styles */
         header {
             background-color: #f0f0f0;
             padding: 20px;
             text-align: center;
+            animation: fadeIn 1s ease-in-out;
         }
         h1 {
             color: #333;
@@ -21,10 +24,16 @@
 
         /* Main content styles */
         main {
-            max-width: 800px;
+            background-image: url('https://coolbackgrounds.io/images/backgrounds/white/white-trianglify-b79c7e1f.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            /* max-width: 800px; */
             margin: 0 auto;
             padding: 20px;
             font-family: Arial, sans-serif;
+            animation: slideInUp 1s ease-in-out;
         }
         h2 {
             color: #0074D9;
@@ -44,6 +53,7 @@
             color: #fff;
             padding: 10px;
             text-align: center;
+            animation: pulse 2s infinite;
         }
         li {
             list-style: none;
@@ -52,26 +62,106 @@
         ul, ol {
             padding-left: 20px;
         }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
     </style>
 </head>
 <body>
+    <div id="background"></div>
     <header>
-        <h1 >Lorem</h1>
+        <h1>Lorem</h1>
         <p>Lorem ipsum dolor sit amet consectetur adt tempore maxime, ratione, error similique eos, at vel nemo deleniti nulla aperiam. Odit ipsa ex facilis cum illo ad doloribus.</p>
     </header>
-    <main><h2>Lorem ipsum dolor sit amet.</h2>
-    <h3>Lorem, ipsum.</h3>
-    <h3>Lorem, ipsum.</h3>
-    <h3>Lorem, ipsum.</h3>
-    <h2>Lorem, ipsum.</h2>
-    <p>Lorem ipsum dotecto. Lorem ipsum dolor sit amet consectetur adipis praesentium?Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur repudiandae quos fugiat animi iste natus incidunt quisquam sint numquam atque nam veniam laborum ducimus voluptatum, in non commodi magnam repellendus.
-    </p>
-    <h2>Lorem, ipsum.</h2>
-    <p>Lorem ipsum dolor, sit amet co explicabo optio voluptatibus laboriosam obcaecati debitis nesciunt aperiam dolore quae? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea id enim dolorem alias incidunt temporibus repudiandae tempora voluptate sint ipsam. Vero at sequi voluptate maxime possimus officiis praesentium magni ipsa.</p>
-    <h2>Lorem, ipsum.</h2>
-    <p>Lorem ipsum dolor s id niatibus quisquam quam ealorem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, itaque impedit? Voluptatum quisquam maiores eos quasi commodi explicabo aliquid. Iste fuga provident saepe laudantium atque earum eum temporibus porro quas?</p>
-
-</main>
-
+    <main>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h3>Lorem, ipsum.</h3>
+        <h3>Lorem, ipsum.</h3>
+        <h3>Lorem, ipsum.</h3>
+        <h2>Lorem, ipsum.</h2>
+        <p>Lorem ipsum dotecto. Lorem ipsum dolor sit amet consectetur adipis praesentium?Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur repudiandae quos fugiat animi iste natus incidunt quisquam sint numquam atque nam veniam laborum ducimus voluptatum, in non commodi magnam repellendus.</p>
+        <h2>Lorem, ipsum.</h2>
+        <p>Lorem ipsum dolor, sit amet co explicabo optio voluptatibus laboriosam obcaecati debitis nesciunt aperiam dolore quae? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea id enim dolorem alias incidunt temporibus repudiandae tempora voluptate sint ipsam. Vero at sequi voluptate maxime possimus officiis praesentium magni ipsa.</p>
+        <h2>Lorem, ipsum.</h2>
+        <p>Lorem ipsum dolor s id niatibus quisquam quam ealorem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, itaque impedit? Voluptatum quisquam maiores eos quasi commodi explicabo aliquid. Iste fuga provident saepe laudantium atque earum eum temporibus porro quas?</p>
+    </main>
+    <footer>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta voluptatum numquam reprehenderit cumque recusandae vitae accusantium rem dignissimos placeat fugit, ipsum veritatis qui corrupti fugiat nostrum impedit? Iste corrupti, tenetur sequi nesciunt ex maiores tempore architecto corporis natus accusantium consequuntur suscipit, libero dolor quod magni! Fugit sequi illum exercitationem!</p>
+    </footer>
+    <script>const canvas = document.getElementById('background');
+        const ctx = canvas.getContext('2d');
+        
+        // Set canvas size to match window dimensions
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        // Draw animated particles
+        const particles = [];
+        const numParticles = 100;
+        
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.radius = Math.random() * 3 + 1;
+                this.speedX = Math.random() * 2 - 1;
+                this.speedY = Math.random() * 2 - 1;
+            }
+        
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+        
+                if (this.x < 0 || this.x > canvas.width) {
+                    this.speedX *= -1;
+                }
+                if (this.y < 0 || this.y > canvas.height) {
+                    this.speedY *= -1;
+                }
+            }
+        
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+                ctx.fill();
+            }
+        }
+        
+        for (let i = 0; i < numParticles; i++) {
+            particles.push(new Particle());
+        }
+        
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+            for (const particle of particles) {
+                particle.update();
+                particle.draw();
+            }
+        
+            requestAnimationFrame(animate);
+        }
+        
+        animate();</script>
 </body>
 </html>
