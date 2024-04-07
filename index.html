@@ -4,7 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <style>
+    <style> #feedback-form {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: slideInUp 0.5s ease-out forwards;
+      }
+      #feedback-form h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      #feedback-form label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      #feedback-form input[type="text"],
+      #feedback-form input[type="email"],
+      #feedback-form textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        animation: slideInUp 0.3s ease-out forwards;
+      }
+      #feedback-form input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: slideInUp 0.3s ease-out forwards;
+      }
+      #feedback-form input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      @keyframes slideInUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
         /* body is here  */
         
         /* Header styles */
@@ -103,7 +149,21 @@
         <p>Lorem ipsum dolor, sit amet co explicabo optio voluptatibus laboriosam obcaecati debitis nesciunt aperiam dolore quae? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea id enim dolorem alias incidunt temporibus repudiandae tempora voluptate sint ipsam. Vero at sequi voluptate maxime possimus officiis praesentium magni ipsa.</p>
         <h2>Lorem, ipsum.</h2>
         <p>Lorem ipsum dolor s id niatibus quisquam kjdfngkndfnk quam ealorem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, itaque impedit? Voluptatum quisquam maiores eos quasi commodi explicabo aliquid. Iste fuga provident saepe laudantium atque earum eum temporibus porro quas?</p>
-    </main>
+        <div id="feedback-form">
+            <h2>Leave Feedback</h2>
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+        
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+        
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+        
+              <input type="submit" value="Submit">
+            </form>
+          </div></main>
     <footer>
             <p>Loem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta voluptatum numquam reprehenderit cumque recusandae vitae accusantium rem dignissimos placeat fugit, ipsum veritatis qui corrupti fugiat nostrum impedit? Iste corrupti, tenetur sequi nesciunt ex maiores tempore architecto corporis natus accusantium consequuntur suscipit, libero dolor quod magni! Fugit sequi illum exercitationem!</p>
     </footer>
