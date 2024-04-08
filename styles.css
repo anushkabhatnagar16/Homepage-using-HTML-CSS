@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f4f4f4, #eaeaea);
+    margin: 0;
+    padding-top: 60px;
+}
+
+nav {
+    background-color: rgb(29, 148, 252);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+.hero {
+    background-image: url("https://i.ibb.co/Pj32nnQ/noname.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.person {
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.person:hover {
+    transform: translateY(-5px);
+}
+
+.person img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.person img:hover {
+    transform: translateY(-5px);
+}
+
+.name,
+.title {
+    animation: fadeIn 2s ease-in-out 0.5s;
+}
+
+.services {
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+}
+
+.contact {
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(29, 148, 252);
+    color: white;
+    animation: fadeIn 2s ease-in-out 1s;
+}

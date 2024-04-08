@@ -3,203 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <style>
-        
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            
-        }
-        header {
-            background-color: rgb(29, 148, 252);
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        .container {
-            text-align: center;
-           
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        
-        
-        
-        .team-container {
-            background-color: rgb(255, 255, 255); /* Light Blue */
-            border-radius: 0px;
-            margin:4px;
-        
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-        }
-        .person {
-            text-align: center;
-            margin: 70px;
-        
-        }
-        .person img {
-            height: 200px;
-            border-radius: 50%;
-            
-        }
-        .container2 {
-            max-width: 1800px;
-            position: relative;
-            text-align: center;
-            color: white;
-          }
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-        .navigation {
-            position:fixed;
-            top:0;
-            left: -79px;
-            width:100%;
-            padding:20px 100px;
-            background: transparent;
-            display: flex;
-            justify-content:space-between;
-            align-items:left;
-            z-index:100;
-        }
-        .logo{  
-            font-size: 32px;
-            color:rgb(0, 0, 0);
-            text-decoration: none;
-            font-weight : 700;
-
-        }
-        .navbar a{
-            position: relative;
-            font: size 18px;
-            color:rgb(0, 0, 0);
-            font-weight: 500;
-            text-decoration: none;
-            margin-right: 50px;
-            
-        }
-        .navbar a::before{
-            content:'';
-            position:absolute;
-            top:106%;
-            left:0;
-            height:2px;
-            width:0px;
-            background:#000000;
-            transition:0.5s;
-            
-        }
-        .navbar a:hover::before{
-            width:100%;
-
-        }
-        .main-logo {
-            position: relative;
-            top: -27px;
-            left: -14px;
-        }
-        
-        </style>
 </head>
 <body>
-    <nav class="navigation">
-        <div class="logo"> 
-            <img class="main-logo" src="https://i.ibb.co/m0C8SrB/20230918-191055-0000-removebg-preview.png" alt="20230918-191055-0000-removebg-preview" border="0" height="100px">
-        </div>
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </nav>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-    
-    <br>
-    <br> 
-    <br>
-    <br>
 
-    <div class="container2">
-        <img src="https://i.ibb.co/Pj32nnQ/noname.png" alt="background" height="300px" width="1800px"></a>
-            <div class="centered">
-                <h1>ABOUT US</h1>
-            </div>
-     </div>
+    <header class="hero" id="home">
+        <h1>Welcome to Our Website</h1>
     </header>
-    <div class="container">
-        <h2>Our Story</h2>
-        <p>we are a team created because of our subject SCM's group project. we are learning to use github and git client in this project.</p>
-<br><br>
-        <h2>Our Mission</h2>
-        <p>Our mission is to learn about working on a project together as a team using github and git client. we also wish to contribute in opensource in future.</p>
-             <br><br>
-             <h2 class="meetourteam">Meet Our Team</h2>
 
+    <section class="team" id="about">
+        <h2>Meet Our Team</h2>
         <div class="team-container">
-            
-
             <div class="person">
-
-                
-
-                <img src="https://i.ibb.co/19pFGKw/d93f6b94-8bac-4056-aa42-5fe9ea635b71.jpg">
-
-                <h3>Nimarpreet Singh</h3>
-                
-
-            </div>
-                <div class="person">
-                    <img src="https://i.ibb.co/9ZP7r97/be0abdd0-2d1c-4ba5-83c9-766480764156.jpg">
-                    <h3>Jaskaran Singh</h3>
-                    
-
-                </div>
-                
-                
-            <div class="person">
-                <img src="https://i.ibb.co/N1pycrJ/091db366-1d3e-4c10-8088-e284f9bbe284.jpg">
-                <h3>   Kanika</h3>
-               
+                <img src="https://i.ibb.co/19pFGKw/d93f6b94-8bac-4056-aa42-5fe9ea635b71.jpg" alt="Team Member 1">
+                <h3 class="name">Nimarpreet Singh</h3>
+                <h4 class="title">Software Engineer</h4>
             </div>
             <div class="person">
-                <img src="https://i.ibb.co/Wc6NJLc/9fcf2bdb-e89a-4e55-891f-52c9d03b4d20.jpg">
-                <h3>Ishita Singla</h3>
-
-                
+                <img src="https://i.ibb.co/9ZP7r97/be0abdd0-2d1c-4ba5-83c9-766480764156.jpg" alt="Team Member 2">
+                <h3 class="name">Jaskaran Singh</h3>
+                <h4 class="title">Software Engineer</h4>
             </div>
-            
+            <div class="person">
+                <img src="https://i.ibb.co/N1pycrJ/091db366-1d3e-4c10-8088-e284f9bbe284.jpg" alt="Team Member 3">
+                <h3 class="name">Kanika</h3>
+                <h4 class="title">Software Engineer</h4>
+            </div>
+            <div class="person">
+                <img src="https://i.ibb.co/Wc6NJLc/9fcf2bdb-e89a-4e55-891f-52c9d03b4d20.jpg" alt="Team Member 4">
+                <h3 class="name">Ishita Singla</h3>
+                <h4 class="title">Software Engineer</h4>
+            </div>
         </div>
-    </div>
-    
-</div>
+    </section>
 
-<br>
-<br>
-<br>
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor justo vitae sapien tincidunt, in pharetra velit fermentum.</p>
+    </section>
 
-<div class="container2">
-    <img src="https://i.ibb.co/Pj32nnQ/noname.png" alt="background" height="300px" width="1800px"></a>
-        <div class="centered">
-            <h1>Contact Us</h1>
-            <h3> mail us @something@gmail.com</h3>
-            <i class="fa fa-phone" style="font-size:17px"> 9998887776 </i>
-        </div>
-</div>
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Mail us at something@gmail.com</p>
+        <i class="fa fa-phone" style="font-size:17px"> 9998887776 </i>
+    </section>
 </body>
 </html>
