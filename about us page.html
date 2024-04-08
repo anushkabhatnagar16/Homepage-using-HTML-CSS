@@ -5,6 +5,114 @@
     <title>About Us</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .highlight {
+            background-color: #ffcc00;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .person {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .person img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .name {
+            margin-top: 10px;
+            color: #333;
+            font-size: 20px;
+        }
+
+        .title {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .services, .contact {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .services h2, .contact h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .contact p, .contact i {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -49,6 +157,12 @@
 
             <h3>Flexibility</h3>
             <p>Git adapts well to projects of any size, from small to very large. Its flexibility allows for various workflows and multiple development styles.</p>
+        </section>
+
+        <section id="github-info">
+            <h2>GitHub and Open Source</h2>
+            <p>GitHub is a web-based platform used for version control and collaboration. It utilizes Git for version control and adds its own features, such as issue tracking, pull requests, and project management tools.</p>
+            <p>Open source software is software with source code that anyone can inspect, modify, and enhance. GitHub hosts millions of open source projects, enabling developers worldwide to collaborate on projects, contribute improvements, and share knowledge.</p>
         </section>
 
         <p class="highlight">In summary, Git’s distributed nature, performance, and branching capabilities have made it a favorite among developers worldwide. Whether you’re working on a personal project or collaborating with a team, Git provides the tools you need to manage your code effectively.</p>
