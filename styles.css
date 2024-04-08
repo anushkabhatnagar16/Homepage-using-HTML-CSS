@@ -35,18 +35,8 @@ nav a:hover {
     color: #ccc;
 }
 
-.hero {
-    background-image: url("https://i.ibb.co/Pj32nnQ/noname.png");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    animation: fadeIn 2s ease-in-out;
-}
+
+
 
 @keyframes fadeIn {
     0% {
@@ -107,4 +97,58 @@ nav a:hover {
     background-color: rgb(29, 148, 252);
     color: white;
     animation: fadeIn 2s ease-in-out 1s;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+header a:hover {
+    color: #ccc;
+}
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+h1, h2 {
+    color: #333;
+}
+p {
+    margin-bottom: 1rem;
+}
+.highlight {
+    color: #f00;
+}
+#git-features ul {
+    list-style-type: none;
+    padding: 0;
+}
+#git-features li {
+    margin-bottom: 0.5rem;
+}
+#git-storing-revisions {
+    margin-top: 2rem;
+}
+#git-advantages h3 {
+    margin-top: 2rem;
+}
+#git-advantages ul {
+    list-style-type: none;
+    padding: 0;
+}
+#git-advantages li {
+    margin-bottom: 1rem;
 }

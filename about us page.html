@@ -7,20 +7,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero" id="home">
-        <h1>Welcome to Our Website</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="team" id="about">
+    <main>
+        <section id="git-intro">
+            <h1>What is Git?</h1>
+            <p>Git is an Open Source Distributed Version Control System (VCS). It was developed by Linus Torvalds, the creator of the Linux Operating System. Unlike traditional centralized VCS, Git is fully distributed, meaning each developer has a local copy of the entire project’s source tree.</p>
+        </section>
+
+        <section id="git-features">
+            <h2>Key Features of Git</h2>
+            <ul>
+                <li>Speed</li>
+                <li>Simplicity</li>
+                <li>Excellent support for parallel development</li>
+                <li>Integrity</li>
+            </ul>
+        </section>
+
+        <section id="git-storing-revisions">
+            <h2>How Git Stores Revisions</h2>
+            <p>Git stores changes in files differently from other VCS like SVN or CVS. Instead of storing only the differences between versions, Git captures a snapshot of the entire changed file. If a file remains unchanged between versions, Git keeps a reference to the original file rather than duplicating it. This approach optimizes memory usage and ensures data integrity.</p>
+        </section>
+
+        <section id="git-advantages">
+            <h2>Advantages of Git</h2>
+            <h3>Performance</h3>
+            <p>Git excels in terms of speed and efficiency. Committing, branching, and merging are all optimized for better performance compared to other systems.</p>
+
+            <h3>Cheap Local Branching</h3>
+            <p>Git allows developers to create branches easily and merge them seamlessly. Feature branches provide an isolated environment for changes, making development more reliable and organized.</p>
+
+            <h3>Flexibility</h3>
+            <p>Git adapts well to projects of any size, from small to very large. Its flexibility allows for various workflows and multiple development styles.</p>
+        </section>
+
+        <p class="highlight">In summary, Git’s distributed nature, performance, and branching capabilities have made it a favorite among developers worldwide. Whether you’re working on a personal project or collaborating with a team, Git provides the tools you need to manage your code effectively.</p>
+    </main>
+
+    <section class="team">
         <h2>Meet Our Team</h2>
         <div class="team-container">
             <div class="person">
@@ -46,12 +80,12 @@
         </div>
     </section>
 
-    <section class="services" id="services">
+    <section class="services">
         <h2>Our Services</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor justo vitae sapien tincidunt, in pharetra velit fermentum.</p>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact">
         <h2>Contact Us</h2>
         <p>Mail us at something@gmail.com</p>
         <i class="fa fa-phone" style="font-size:17px"> 9998887776 </i>
