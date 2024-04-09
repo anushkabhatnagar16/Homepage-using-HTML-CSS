@@ -74,6 +74,8 @@
         .person {
             text-align: center;
             margin: 20px;
+            position: relative; /* Added */
+            overflow: hidden; /* Added */
         }
 
         .person img {
@@ -82,6 +84,28 @@
             height: 150px;
             border: 3px solid #fff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease; /* Added */
+        }
+
+        .person:hover img {
+            transform: scale(1.1); /* Added */
+        }
+
+        .person .info {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff; /* Changed text color to white */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+
+        .person:hover .info { /* Added */
+            transform: translateY(0);
         }
 
         .name {
@@ -173,23 +197,31 @@
         <div class="team-container">
             <div class="person">
                 <img src="https://i.ibb.co/19pFGKw/d93f6b94-8bac-4056-aa42-5fe9ea635b71.jpg" alt="Team Member 1">
-                <h3 class="name">Nimarpreet Singh</h3>
-                <h4 class="title">Software Engineer</h4>
+                <div class="info"> <!-- Added -->
+                    <h3 class="name">Nimarpreet Singh</h3>
+                    <h4 class="title">Software Engineer</h4>
+                </div>
             </div>
             <div class="person">
                 <img src="https://i.ibb.co/9ZP7r97/be0abdd0-2d1c-4ba5-83c9-766480764156.jpg" alt="Team Member 2">
-                <h3 class="name">Jaskaran Singh</h3>
-                <h4 class="title">Software Engineer</h4>
+                <div class="info"> <!-- Added -->
+                    <h3 class="name">Jaskaran Singh</h3>
+                    <h4 class="title">Software Engineer</h4>
+                </div>
             </div>
             <div class="person">
                 <img src="https://i.ibb.co/N1pycrJ/091db366-1d3e-4c10-8088-e284f9bbe284.jpg" alt="Team Member 3">
-                <h3 class="name">Kanika</h3>
-                <h4 class="title">Software Engineer</h4>
+                <div class="info"> <!-- Added -->
+                    <h3 class="name">Kanika</h3>
+                    <h4 class="title">Software Engineer</h4>
+                </div>
             </div>
             <div class="person">
                 <img src="https://i.ibb.co/Wc6NJLc/9fcf2bdb-e89a-4e55-891f-52c9d03b4d20.jpg" alt="Team Member 4">
-                <h3 class="name">Ishita Singla</h3>
-                <h4 class="title">Software Engineer</h4>
+                <div class="info"> <!-- Added -->
+                    <h3 class="name">Ishita Singla</h3>
+                    <h4 class="title">Software Engineer</h4>
+                </div>
             </div>
         </div>
     </section>
@@ -204,5 +236,10 @@
         <p>Mail us at something@gmail.com</p>
         <i class="fa fa-phone" style="font-size:17px"> 9998887776 </i>
     </section>
+
+    <script>
+        // JavaScript can be added here if necessary
+    </script>
 </body>
 </html>
+
