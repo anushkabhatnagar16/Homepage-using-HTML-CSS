@@ -1,139 +1,163 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <style>
-        /* Global styles */
         body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            overflow-x: hidden;
         }
 
-        /* Header styles */
-        header {
-            background-color: #0074D9;
-            padding: 20px;
+        h1,
+        h2,
+        h3 {
+            color: #444;
+            margin-bottom: 10px;
             text-align: center;
-            color: #fff;
-            animation: fadeIn 1s ease-in-out;
         }
 
         h1 {
-            margin: 0;
-            font-size: 36px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px #ccc;
+            animation: h1-animation 2s ease-in-out infinite;
+        }
+
+        h2 {
+            font-size: 2em;
+            border-left: 5px solid #444;
+            padding-left: 10px;
+            animation: h2-animation 2s ease-in-out infinite;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            border-bottom: 2px solid #444;
+            animation: h3-animation 2s ease-in-out infinite;
         }
 
         p {
-            margin-top: 10px;
-            color: #fff;
-        }
-
-        /* Main content styles */
-        main {
-            padding: 20px;
-        }
-
-        h2, h3 {
-            color: #0074D9;
-            margin-bottom: 10px;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        /* Feedback form styles */
-        #feedback-form {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            animation: slideInUp 0.5s ease-out forwards;
-        }
-
-        #feedback-form h2 {
+            font-size: 1.1em;
+            margin-bottom: 20px;
             text-align: center;
-            margin-bottom: 30px;
-            color: #0074D9;
+        }
+
+        a {
+            color: #0088cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #005580;
+            text-decoration: underline;
+        }
+
+        header,
+        main,
+        footer {
+            padding: 20px;
+            animation: main-animation 2s ease-in-out infinite;
+        }
+
+        header {
+            background-color: #ddd;
+            border-bottom: 1px solid #ccc;
+        }
+
+        main {
+            background-color: #fff;
+            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+        }
+
+        footer {
+            background-color: #ddd;
+            border-top: 1px solid #ccc;
+            text-align: center;
+        }
+
+        #feedback-form {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            animation: form-animation 2s ease-in-out infinite;
         }
 
         #feedback-form label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
+            text-align: left;
         }
 
-        #feedback-form input[type="text"],
-        #feedback-form input[type="email"],
+        #feedback-form input,
         #feedback-form textarea {
             width: 100%;
             padding: 10px;
-            border-radius: 5px;
+            margin-bottom: 10px;
             border: 1px solid #ccc;
+            border-radius: 5px;
             box-sizing: border-box;
-            animation: slideInUp 0.3s ease-out forwards;
+            animation: input-animation 2s ease-in-out infinite;
         }
 
         #feedback-form input[type="submit"] {
-            background-color: #0074D9;
+            background-color: #0088cc;
             color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
             cursor: pointer;
-            animation: slideInUp 0.3s ease-out forwards;
+            animation: submit-animation 2s ease-in-out infinite;
         }
 
         #feedback-form input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: #005580;
         }
 
-        /* Footer styles */
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            animation: pulse 2s infinite;
+        @keyframes h1-animation {
+            0% { color: #444; }
+            50% { color: #ff9966; }
+            100% { color: #444; }
         }
 
-        /* Keyframe animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        @keyframes h2-animation {
+            0% { border-color: #444; }
+            50% { border-color: #ff5e62; }
+            100% { border-color: #444; }
         }
 
-        @keyframes slideInUp {
-            from {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        @keyframes h3-animation {
+            0% { border-color: #444; }
+            50% { border-color: #ff9966; }
+            100% { border-color: #444; }
         }
 
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
+        @keyframes main-animation {
+            0% { background-color: #fff; }
+            50% { background-color: #f5f5f5; }
+            100% { background-color: #fff; }
         }
 
+        @keyframes form-animation {
+            0% { background-color: #f5f5f5; }
+            50% { background-color: #e5e5e5; }
+            100% { background-color: #f5f5f5; }
+        }
+
+        @keyframes input-animation {
+            0% { border-color: #ccc; }
+            50% { border-color: #ff9966; }
+            100% { border-color: #ccc; }
+        }
+
+        @keyframes submit-animation {
+            0% { background-color: #0088cc; }
+            50% { background-color: #005580; }
+            100% { background-color: #0088cc; }
+        }
     </style>
 </head>
 <body>
@@ -157,13 +181,13 @@
             <form>
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required>
-        
+
               <label for="email">Email:</label>
               <input type="email" id="email" name="email" required>
-        
+
               <label for="message">Message:</label>
               <textarea id="message" name="message" rows="4" required></textarea>
-        
+
               <input type="submit" value="Submit">
             </form>
           </div>
@@ -172,65 +196,7 @@
         <p>© 2024 Your Company. All rights reserved.</p>
     </footer>
     <script>
-        // JavaScript for animated background
-        const canvas = document.createElement('canvas');
-        document.body.appendChild(canvas);
-        const ctx = canvas.getContext('2d');
 
-        // Set canvas size to match window dimensions
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        // Draw animated particles
-        const particles = [];
-        const numParticles = 100;
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.radius = Math.random() * 3 + 1;
-                this.speedX = Math.random() * 2 - 1;
-                this.speedY = Math.random() * 2 - 1;
-            }
-
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                if (this.x < 0 || this.x > canvas.width) {
-                    this.speedX *= -1;
-                }
-                if (this.y < 0 || this.y > canvas.height) {
-                    this.speedY *= -1;
-                }
-            }
-
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-                ctx.fill();
-            }
-        }
-
-        for (let i = 0; i < numParticles; i++) {
-            particles.push(new Particle());
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            for (const particle of particles) {
-                particle.update();
-                particle.draw();
-            }
-
-            requestAnimationFrame(animate);
-        }
-
-        animate();
-        <h3>yo</h3>
     </script>
 </body>
 </html>
