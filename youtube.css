@@ -2,94 +2,77 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #181818;
+    color: #fff;
+    display: flex;
 }
 
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
     padding: 10px 20px;
-    background-color: #FF0000;
+    background-color: #202020;
     color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.menu-icon img {
+    height: 30px;
+    cursor: pointer;
 }
 
 .logo img {
     height: 40px;
+    margin-left: 20px;
 }
 
-.search-bar {
-    display: flex;
-    flex-grow: 1;
-    margin: 0 20px;
+#sidebar {
+    width: 200px;
+    background-color: #202020;
+    padding: 60px 20px 20px; /* Adjusted padding to account for fixed header */
+    border-right: 1px solid #333;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
 }
 
-.search-bar input {
-    flex-grow: 1;
-    padding: 5px;
+#sidebar nav table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.search-bar button {
-    padding: 5px 10px;
-    background-color: white;
-    border: none;
-    cursor: pointer;
+#sidebar nav table, th, td {
+    border: 1px solid #333;
 }
 
-.user-icon img {
-    height: 40px;
-    border-radius: 50%;
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+}
+
+td a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+td a:hover {
+    background-color: #555;
 }
 
 main {
-    display: flex;
-}
-
-aside {
-    width: 200px;
-    background-color: #F9F9F9;
+    margin-left: 220px;
     padding: 20px;
-}
-
-aside nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-aside nav ul li {
-    margin-bottom: 10px;
-}
-
-aside nav ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-.video-list {
-    flex-grow: 1;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.video-item {
-    width: 30%;
-    margin: 10px;
-    background-color: #FFF;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-radius: 4px;
-    overflow: hidden;
-    transition: transform 0.2s;
-}
-
-.video-item img {
-    width: 100%;
-    height: auto;
-}
-
-.video-info {
-    padding: 10px;
-}
-
-.video-item:hover {
-    transform: scale(1.05);
+    width: calc(100% - 220px);
+    margin-top: 60px; /* Adjusted margin to account for fixed header */
 }

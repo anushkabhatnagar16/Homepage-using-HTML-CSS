@@ -3,53 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Clone</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="YouTube Clone Logo">
+    
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <img src="./images/menu.png" class="menu-icon" alt="" srcset="">
+            <img src="./images/logo.png" class="logo" alt="" srcset="">
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search">
-            <button>Search</button>
+        <div class="nav-middle flex-div">
+           <div class="search-box flex-div">
+               <input type="text" placeholder="Search..">
+               <img src="./images/search.png" alt="" srcset="">
+           </div>
+           <img src="./images/voice-search.png" class="mic-icon" alt="" srcset="">
         </div>
-        <div class="user-icon">
-            <img src="user-icon.png" alt="User Icon">
+        <div class="nav-right flex-div">
+            <img src="./images/upload.png" alt="" srcset="">
+            <img src="./images/more.png" alt="" srcset="">
+            <img src="./images/notification.png" alt="" srcset="">
+            <img src="./images/user.jpg" class="user-icon" alt="" srcset="">
         </div>
-    </header>
-    <main>
-        <aside>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Trending</a></li>
-                    <li><a href="#">Subscriptions</a></li>
-                    <li><a href="#">Library</a></li>
-                    <li><a href="#">History</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <section class="video-list">
-            <div class="video-item">
-                <img src="thumbnail1.jpg" alt="Video Thumbnail">
-                <div class="video-info">
-                    <h3>Video Title 1</h3>
-                    <p>Channel Name</p>
-                    <p>1M views • 1 week ago</p>
-                </div>
-            </div>
-            <div class="video-item">
-                <img src="thumbnail2.jpg" alt="Video Thumbnail">
-                <div class="video-info">
-                    <h3>Video Title 2</h3>
-                    <p>Channel Name</p>
-                    <p>500K views • 2 days ago</p>
-                </div>
-            </div>
-            <!-- Add more video items as needed -->
-        </section>
-    </main>
+
+        
+     <div class="sidebar">
+        <div class="shortcut-links">
+            <a href="#"><img src="./images/home.png"><p>Home</p></a>
+            <a href="#"><img src="./images/explore.png"><p>explore</p></a>
+            <a href="#"><img src="./images/subscriprion.png"><p>subscriprion</p></a>
+            <hr>
+            <a href="#"><img src="./images/library.png"><p>library</p></a>
+            <a href="#"><img src="./images/history.png"><p>History</p></a>
+            <a href="#"><img src="./images/playlist.png"><p>playlist</p></a>
+            <a href="#"><img src="./images/messages.png"><p>messages</p></a>
+            <a href="#"><img src="./images/show-more.png"><p>Show more</p></a>
+            <hr>
+           </div>
+         <div class="subscribed-list">
+             <h3>SUBSCRIPTIONS</h3>
+             <a href="#"><img src="./images/Jack.png"><p>Jack   &bull;</p></a>
+             <a href="#"><img src="./images/simon.png"><p>simon </p></a>
+             <a href="#"><img src="./images/tom.png"><p>Tom  &bull;</p></a>
+             <a href="#"><img src="./images/megan.png"><p>Megan Fox  &bull;</p></a>
+             <a href="#"><img src="./images/cameron.png"><p>Cameron Green </p></a>
+           
+           </div>
+       </div>
+
+<!-- Main Body -->
+<div class="container">
+   <div class="banner">
+       <img src="./images/banner.png" alt="" srcset="">
+   </div>
+   <div class="list-container">
+      <div class="vid-list">
+          <a href="video-1.html"> <img src="./images/thumbnail1.png" class="thumbnail" ></a>
+          <div class="flex-div">
+              <img src="./images/user.jpg">
+              <div class="vid-info">
+                  <a href="video-1.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+                  <p>Avalin</p>
+                  <p>2k Views &bull; 2 days</p>
+              </div>
+          </div>
+      </div>
+    
+      <div class="vid-list">
+       <a href="video-2.html"> <img src="./images/thumbnail2.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="video-2.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Ava</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="video-3.html"> <img src="./images/thumbnail3.jpeg" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="video-3.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail4.avif" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail5.jpg" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail6.avif" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail7.webp" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail8.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+
+       <div class="vid-list">
+       <a href="video-9.html"> <img src="./images/thumbnail9.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="video-9.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>  
+   
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail10.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="video-11.html"> <img src="./images/thumbnail11.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="video-11.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="video-12.html"> <img src="./images/thumbnail12.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="video-12.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail13.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail14.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail15.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail16.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail17.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail18.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail19.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="vid-list">
+       <a href="#"> <img src="./images/thumbnail20.png" class="thumbnail" ></a>
+       <div class="flex-div">
+           <img src="./images/user.jpg">
+           <div class="vid-info">
+               <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nobis?</a>
+               <p>Avalin</p>
+               <p>2k Views &bull; 2 days</p>
+           </div>
+       </div>
+   </div>
+
+
+   </div>
+
+
+
+</div>
+
 </body>
 </html>
