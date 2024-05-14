@@ -21,7 +21,7 @@ img{
 nav {
     padding: 0 2%;
     justify-content: space-between;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(112, 21, 21, 0.2);
     background: #fff;
     position: sticky;
     top: 0;
@@ -38,7 +38,7 @@ nav {
 .nav-right .user-icon{
 width: 35px;
 margin-right: 0px;
-border-radius: 50%;
+border-radius: 60%;
 
 }
 
@@ -231,7 +231,7 @@ margin-right: 20px;
    .nav-middle .search-box {
        width: 100px;
        display: none;
-
+        
    }
 
    .nav-middle .mic-icon{
@@ -303,7 +303,7 @@ margin-right: 20px;
 
 .play-video .play-video-info{
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 5px;
