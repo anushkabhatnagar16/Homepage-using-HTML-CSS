@@ -44,14 +44,14 @@ nav {
     border-radius: 50%;
 }
 
-/* .nav-left .menu-icon {
+.nav-left .menu-icon {
     width: 22px;
     margin-right: 25px;
-} */
+}
 
-/* .nav-left .logo {
+.nav-left .logo {
     width: 130px;
-} */
+}
 
 .nav-middle .mic-icon {
     width: 16px;
@@ -81,7 +81,7 @@ nav {
     width: 15%;
     height: 100vh;
     position: fixed;
-    top: 0;
+    top: 40;
     padding-left: 2%;
     padding-top: 98px;
     transition: width 0.3s;
