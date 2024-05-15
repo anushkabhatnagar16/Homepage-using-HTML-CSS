@@ -20,7 +20,6 @@ img {
     align-items: center;
 }
 
-/* Navigation Bar */
 nav {
     padding: 0 2%;
     justify-content: space-between;
@@ -80,7 +79,6 @@ nav {
     width: 15px;
 }
 
-/* Sidebar */
 .sidebar {
     background: #fff;
     width: 15%;
@@ -150,7 +148,6 @@ nav {
     display: none;
 }
 
-/* Main Body */
 .container {
     background: #f9f9f9;
     padding-left: 17%;
@@ -249,7 +246,6 @@ nav {
     }
 }
 
-/* Video Page Specific */
 .play-container {
     padding-left: 2% !important;
 }
