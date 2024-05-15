@@ -73,6 +73,7 @@ nav {
     border: 0;
     outline: 0;
     background: transparent;
+    position: relative;
 }
 
 .nav-middle .search-box img {
@@ -139,9 +140,6 @@ nav {
 .small-sidebar {
     width: 5%;
 }
-
-.small-sidebar .shortcut-links a p,
-.small-sidebar .subscribed-list a,
 .small-sidebar h3 {
     display: none;
 }
