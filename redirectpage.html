@@ -11,14 +11,24 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
         }
 
         h1 {
             text-align: center;
             color: #333;
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
         }
 
         button {
@@ -36,13 +46,53 @@
         button:hover {
             background-color: #45a049;
         }
+
+        .team-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .team-member {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .team-member h2 {
+            color: #333;
+        }
+
     </style>
 </head>
 <body>
     <h1>Choose a service:</h1>
-    <button onclick="window.location.href='youtube.html'">Go to YouTube</button>
-    <button onclick="window.location.href='netflix.html'">Go to Netflix</button>
-    <button onclick="window.location.href='spotifyclone.html'">Go to Spotify Clone</button>
-    <button onclick="window.location.href='prime.html'">Go to Prime</button>
+    <div class="button-container">
+        <button onclick="window.location.href='youtube.html'">Go to YouTube</button>
+        <button onclick="window.location.href='netflix.html'">Go to Netflix</button>
+        <button onclick="window.location.href='spotifyclone.html'">Go to Spotify Clone</button>
+        <button onclick="window.location.href='prime.html'">Go to Prime</button>
+    </div>
+    
+    <div class="team-section">
+        <div class="team-member">
+            <h2>Jaskaran Singh</h2>
+        </div>
+        <div class="team-member">
+            <h2>Kanika</h2>
+        </div>
+        <div class="team-member">
+            <h2>Nimarpreet Singh</h2>
+        </div>
+        <div class="team-member">
+            <h2>Ishita Singla</h2>
+        </div>
+    </div>
 </body>
 </html>
