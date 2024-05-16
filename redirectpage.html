@@ -56,14 +56,15 @@
         }
 
         .container {
-            margin-top: 70px; /* Offset for fixed header */
+            margin-top: 100px; /* Space after navbar */
             width: 90%;
             max-width: 1200px;
         }
 
         h1 {
             color: #6a1b9a; /* Dark purple text */
-            margin: 20px 0;
+            margin: 40px 0 20px; /* Top and bottom margin adjusted */
+            text-align: center; /* Center align text */
         }
 
         .button-container {
@@ -97,6 +98,7 @@
             justify-content: center;
             align-items: center;
             margin: 40px 0;
+            text-align: center; /* Center align text */
         }
 
         .team-member {
@@ -220,58 +222,81 @@
             color: white;
             margin: 0 10px;
             font-size: 20px;
-            text-decoration: none;
         }
-
-        .social-icons a:hover {
-            color: #ccc;
-        }
-
     </style>
 </head>
 <body>
     <header>
+        <div class="header-title">SCM Project</div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#team">Team</a></li>
+                <li><a href="#team">Our Team</a></li>
                 <li><a href="#feedback">Feedback</a></li>
             </ul>
         </nav>
-        <div class="header-title">SCM Project</div>
     </header>
 
-    <div class="container">
-        <section id="home">
-            <h1>Choose a service:</h1>
-            <div class="button-container">
-                <button onclick="window.location.href='youtube.html'">Go to YouTube</button>
-                <button onclick="window.location.href='netflix.html'">Go to Netflix</button>
-                <button onclick="window.location.href='spotifyclone.html'">Go to Spotify Clone</button>
-                <button onclick="window.location.href='prime.html'">Go to Prime</button>
-            </div>
-        </section>
+    <div class="container" id="home">
+        <h1>Welcome to our SCM Project</h1>
+        <div class="button-container">
+            <button onclick="window.location.href='youtube.html'">Go to YouTube</button>
+            <button onclick="window.location.href='netflix.html'">Go to Netflix</button>
+            <button onclick="window.location.href='spotifyclone.html'">Go to Spotify Clone</button>
+            <button onclick="window.location.href='prime.html'">Go to Prime</button>
+        </div>
+    </div>
 
-        <section id="about" class="about-section">
-            <h2>About Us</h2>
-            <p>This SCM project is developed to demonstrate the integration of various services and teamwork. Our dedicated team has worked tirelessly to bring you seamless navigation between popular platforms.</p>
-        </section>
-
-        <section id="services" class="services-section">
-            <h2>Our Services</h2>
-            <p>We offer links to various services including YouTube, Netflix, Spotify, and Prime. Each service is handled by our skilled team members, ensuring a smooth user experience.</p>
-        </section>
-
-        <section id="team" class="team-section">
+    <div class="container" id="team">
+        <h1>Our Team</h1>
+        <div class="team-section">
             <div class="team-member">
-                <img src="path/to/jaskaran.jpg" alt="Jaskaran Singh">
+                <img src="https://via.placeholder.com/150" alt="Jaskaran Singh">
                 <h2>Jaskaran Singh</h2>
             </div>
             <div class="team-member">
-                <img src="path/to/kanika.jpg" alt="Kanika">
+                <img src="https://via.placeholder.com/150" alt="Kanika">
                 <h2>Kanika</h2>
             </div>
             <div class="team-member">
-                <img src="path/to/nimarpreet.jpg" alt="Nimarpre
+                <img src="https://via.placeholder.com/150" alt="Nimarpreet Singh">
+                <h2>Nimarpreet Singh</h2>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Ishita Singla">
+                <h2>Ishita Singla</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="feedback-section" id="feedback">
+        <h2>Feedback</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Main link page - Kanika</p>
+        <p>Netflix homepage, Prime home page - Nimarpreet Singh</p>
+        <p>Complete Spotify clone - Jaskaran Singh</p>
+        <p>Youtube clone - Ishita Singla</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
