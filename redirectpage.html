@@ -11,59 +11,44 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             min-height: 100vh;
         }
 
-        header {
-            width: 100%;
+        .sidebar {
+            width: 200px; /* Initial width of sidebar */
             background-color: #6a1b9a; /* Dark purple background */
             color: white;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
+            padding: 20px;
+            transition: width 0.3s; /* Transition effect for width */
         }
 
-        nav ul {
+        .sidebar:hover {
+            width: 80px; /* Width of sidebar on hover */
+        }
+
+        .sidebar ul {
             list-style-type: none;
-            margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
+            margin: 0;
         }
 
-        nav ul li {
-            margin: 0 15px;
+        .sidebar ul li {
+            margin-bottom: 10px;
         }
 
-        nav ul li a {
+        .sidebar ul li a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .header-title {
-            font-size: 36px;
-            font-weight: bold;
-            margin: 0;
         }
 
         .container {
-            margin-top: 100px; /* Space after navbar */
-            width: 90%;
-            max-width: 1200px;
+            flex: 1; /* Take remaining space */
+            padding: 20px;
         }
 
         h1 {
             color: #6a1b9a; /* Dark purple text */
-            margin: 40px 0 20px; /* Top and bottom margin adjusted */
+            margin-bottom: 20px;
             text-align: center; /* Center align text */
         }
 
@@ -131,26 +116,6 @@
             margin: 10px 0 5px;
         }
 
-        .about-section,
-        .services-section,
-        .testimonials-section {
-            width: 100%;
-            max-width: 800px;
-            margin: 40px 0;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .about-section h2,
-        .services-section h2,
-        .testimonials-section h2 {
-            color: #6a1b9a; /* Dark purple text */
-            margin-bottom: 20px;
-        }
-
         .feedback-section {
             width: 100%;
             max-width: 600px;
@@ -202,42 +167,34 @@
         }
 
         footer {
-            width: 100%;
             background-color: #6a1b9a; /* Dark purple background */
             color: white;
             text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
+            padding: 20px;
+            width: 100%;
         }
 
         footer p {
             margin: 5px 0;
         }
 
-        .social-icons {
-            margin-top: 20px;
-        }
-
         .social-icons a {
             color: white;
-            margin: 0 10px;
-            font-size: 20px;
+            margin: 0 5px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-title">SCM Project</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#team">Our Team</a></li>
-                <li><a href="#feedback">Feedback</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
 
-    <div class="container" id="home">
+    <div class="container">
         <h1>Welcome to our SCM Project</h1>
         <div class="button-container">
             <button onclick="window.location.href='youtube.html'">Go to YouTube</button>
@@ -245,15 +202,8 @@
             <button onclick="window.location.href='spotifyclone.html'">Go to Spotify Clone</button>
             <button onclick="window.location.href='prime.html'">Go to Prime</button>
         </div>
-    </div>
 
-    <div class="container" id="team">
-        <h1>Our Team</h1>
         <div class="team-section">
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Jaskaran Singh">
-                <h2>Jaskaran Singh</h2>
-            </div>
             <div class="team-member">
                 <img src="https://via.placeholder.com/150" alt="Kanika">
                 <h2>Kanika</h2>
@@ -263,40 +213,43 @@
                 <h2>Nimarpreet Singh</h2>
             </div>
             <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Jaskaran Singh">
+                <h2>Jaskaran Singh</h2>
+            </div>
+            <div class="team-member">
                 <img src="https://via.placeholder.com/150" alt="Ishita Singla">
                 <h2>Ishita Singla</h2>
             </div>
         </div>
-    </div>
 
-    <div class="feedback-section" id="feedback">
-        <h2>Feedback</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+        <div class="feedback-section">
+            <h2>Feedback</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-
-    <footer>
-        <p>Main link page - Kanika</p>
-        <p>Netflix homepage, Prime home page - Nimarpreet Singh</p>
-        <p>Complete Spotify clone - Jaskaran Singh</p>
-        <p>Youtube clone - Ishita Singla</p>
-        <div class="social-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
+                <button type="submit">Submit</button>
+            </form>
         </div>
-    </footer>
 
+        <footer>
+            <p>Main link page - Kanika</p>
+            <p>Netflix homepage, Prime home page - Nimarpreet Singh</p>
+            <p>Complete Spotify clone - Jaskaran Singh</p>
+            <p>Youtube clone - Ishita Singla</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
