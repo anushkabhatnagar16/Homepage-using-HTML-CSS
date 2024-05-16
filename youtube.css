@@ -47,7 +47,6 @@ nav {
 
 .nav-middle .search-box {
     border: 1px solid #060606;
-    /* margin-right: 15px; */
     padding: 8px 80px;
     border-radius: 600px;
 }
@@ -139,14 +138,6 @@ nav {
     padding-bottom: 20px;
 }
 
-.large-container {
-    padding-left: 7%;
-}
-
-.banner {
-    width: 100%;
-    display: none;
-}
 
 .banner img {
     width: 100%;
