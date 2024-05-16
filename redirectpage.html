@@ -279,5 +279,41 @@
     // Start the animation
     animateTitle();
 </script>
+<script>
+    // JavaScript code
+    const title = document.querySelector('h1');
+
+    // Array of words to animate
+    const words = ["Welcome", "to", "our", "SCM", "Project"];
+
+    // Index to keep track of the current word
+    let index = 0;
+
+    // Function to animate the title
+    function animateTitle() {
+        title.textContent = words[index]; // Set current word
+        index = (index + 1) % words.length; // Increment index, loop back if necessary
+        setTimeout(animateTitle, 1000); // Repeat after 1 second
+    }
+
+    // Start the animation
+    animateTitle();
+</script>
+<script>
+    // JavaScript code
+    let currentIndex = 0; // Current index of the slide
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    // Function to show the next slide
+    function showNextSlide() {
+        slides[currentIndex].style.display = 'none'; // Hide current slide
+        currentIndex = (currentIndex + 1) % totalSlides; // Move to next slide
+        slides[currentIndex].style.display = 'block'; // Show next slide
+    }
+
+    // Set interval to automatically show next slide every 3 seconds
+    setInterval(showNextSlide, 3000);
+</script>
 
 </html>
