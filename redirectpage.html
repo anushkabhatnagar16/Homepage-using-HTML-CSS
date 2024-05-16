@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCM Project</title>
     <style>
-        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5fa; /* Light lavender background */
             margin: 0;
             padding: 0;
             display: flex;
+            min-height: 100vh;
         }
 
         .sidebar {
@@ -33,18 +33,23 @@
         }
 
         .sidebar ul li {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .sidebar ul li a {
             color: white;
             text-decoration: none;
+            font-size: 18px; /* Increase font size of sidebar buttons */
+            display: block; /* Ensure buttons take full width */
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #512da8; /* Darker shade of purple on hover */
         }
 
         .container {
             flex: 1; /* Take remaining space */
             padding: 20px;
-            box-sizing: border-box;
         }
 
         h1 {
@@ -74,7 +79,7 @@
         }
 
         button:hover {
-            background-color: #7b1fa2; /* Darker purple on hover */
+            background-color: #7b1fa2; /* Darker shade of purple on hover */
             transform: translateY(-2px);
         }
 
@@ -85,6 +90,7 @@
             align-items: center;
             margin: 40px 0;
             text-align: center; /* Center align text */
+            transition: margin-left 0.3s; /* Add transition to team section */
         }
 
         .team-member {
@@ -163,55 +169,25 @@
         }
 
         .feedback-section button:hover {
-            background-color: #7b1fa2; /* Darker purple on hover */
+            background-color: #7b1fa2; /* Darker shade of purple on hover */
             transform: translateY(-2px);
         }
 
-        .footer {
+        footer {
             background-color: #6a1b9a; /* Dark purple background */
             color: white;
             text-align: center;
             padding: 20px;
             width: 100%;
-            margin-top: auto;
         }
 
-        .footer p {
+        footer p {
             margin: 5px 0;
         }
 
         .social-icons a {
             color: white;
             margin: 0 5px;
-        }
-
-        /* Image Slider Styles */
-        .slider-container {
-            margin-bottom: 40px;
-        }
-
-        .slider {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: none; /* Hides scrollbar in Firefox */
-            -ms-overflow-style: none; /* Hides scrollbar in Edge */
-        }
-
-        .slider::-webkit-scrollbar {
-            display: none; /* Hides scrollbar in Chrome, Safari, and Opera */
-        }
-
-        .slide {
-            flex: 0 0 auto;
-            width: 100%;
-            scroll-snap-align: start;
-        }
-
-        .slide img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
         }
     </style>
 </head>
@@ -269,26 +245,39 @@
             </form>
         </div>
 
-        <div class="slider-container">
-            <div class="slider">
-                <div class="slide"><img src="https://via.placeholder.com/600x300" alt="Slide 1"></div>
-                <div class="slide"><img src="https://via.placeholder.com/600x300" alt="Slide 2"></div>
-                <div class="slide"><img src="https://via.placeholder.com/600x300" alt="Slide 3"></div>
+        <footer>
+            <p>Main link page - Kanika</p>
+            <p>Netflix homepage, Prime home page - Nimarpreet Singh</p>
+            <p>Complete Spotify clone - Jaskaran Singh</p>
+            <p>Youtube clone - Ishita Singla</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
             </div>
-        </div>
+        </footer>
     </div>
-
-    <footer class="footer">
-        <p>Main link page - Kanika</p>
-        <p>Netflix homepage, Prime home page - Nimarpreet Singh</p>
-        <p>Complete Spotify clone - Jaskaran Singh</p>
-        <p>Youtube clone - Ishita Singla</p>
-        <div class="social-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-        </div>
-    </footer>
 </body>
+<script>
+    // JavaScript code
+    const title = document.querySelector('h1');
+
+    // Array of words to animate
+    const words = ["Welcome", "to", "our", "SCM", "Project"];
+
+    // Index to keep track of the current word
+    let index = 0;
+
+    // Function to animate the title
+    function animateTitle() {
+        title.textContent = words[index]; // Set current word
+        index = (index + 1) % words.length; // Increment index, loop back if necessary
+        setTimeout(animateTitle, 1000); // Repeat after 1 second
+    }
+
+    // Start the animation
+    animateTitle();
+</script>
+
 </html>
