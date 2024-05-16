@@ -15,7 +15,7 @@
         }
 
         .sidebar {
-            width: 200px; /* Initial width of sidebar */
+            width: 80px; /* Initial width of sidebar */
             background-color: #6a1b9a; /* Dark purple background */
             color: white;
             padding: 20px;
@@ -23,7 +23,7 @@
         }
 
         .sidebar:hover {
-            width: 80px; /* Width of sidebar on hover */
+            width: 200px; /* Width of sidebar on hover */
         }
 
         .sidebar ul {
@@ -33,12 +33,18 @@
         }
 
         .sidebar ul li {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .sidebar ul li a {
             color: white;
             text-decoration: none;
+            font-size: 18px; /* Increase font size of sidebar buttons */
+            display: block; /* Ensure buttons take full width */
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #512da8; /* Darker shade of purple on hover */
         }
 
         .container {
@@ -73,7 +79,7 @@
         }
 
         button:hover {
-            background-color: #7b1fa2; /* Darker purple on hover */
+            background-color: #7b1fa2; /* Darker shade of purple on hover */
             transform: translateY(-2px);
         }
 
@@ -84,6 +90,7 @@
             align-items: center;
             margin: 40px 0;
             text-align: center; /* Center align text */
+            transition: margin-left 0.3s; /* Add transition to team section */
         }
 
         .team-member {
@@ -162,7 +169,7 @@
         }
 
         .feedback-section button:hover {
-            background-color: #7b1fa2; /* Darker purple on hover */
+            background-color: #7b1fa2; /* Darker shade of purple on hover */
             transform: translateY(-2px);
         }
 
