@@ -50,7 +50,7 @@ nav {
 }
 
 .nav-left .logo {
-    width: 130px;
+    width: 90px;
 }
 
 .nav-middle .mic-icon {
@@ -101,16 +101,16 @@ nav {
     margin-top: 13px;
 }
 
-.shortcut-links a:first-child {
+/* .shortcut-links a:first-child {
     color: #ed3833;
-}
+} */
 
-.sidebar hr {
+/* .sidebar hr {
     border: 0;
     height: 1px;
     background: #ccc;
     width: 85%;
-}
+} */
 
 .subscribed-list h3 {
     font-size: 13px;
@@ -121,7 +121,7 @@ nav {
 .subscribed-list a {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 200px;
     width: fit-content;
     flex-wrap: wrap;
 }
@@ -132,12 +132,12 @@ nav {
     margin-right: 28px;
 }
 
-.small-sidebar {
-    width: 5%;
-}
-.small-sidebar h3 {
+/* .small-sidebar {
+    width: 50%;
+} */
+/* .small-sidebar h3 {
     display: none;
-}
+} */
 
 .small-sidebar hr {
     width: 50%;
@@ -153,9 +153,9 @@ nav {
     padding-bottom: 20px;
 }
 
-/* .large-container {
+.large-container {
     padding-left: 7%;
-} */
+}
 
 .banner {
     width: 100%;
@@ -196,10 +196,10 @@ nav {
     border-radius: 50%;
 }
 
-.vid-info {
+/* .vid-info {
     color: #5a5a5a;
     font-size: 13px;
-}
+} */
 
 .vid-info a {
     color: black;
@@ -218,11 +218,11 @@ nav {
         display: none;
     }
 
-    .container,
-    .large-container {
+ 
+    /* .large-container {
         padding-left: 5%;
         padding-right: 5%;
-    }
+    } */
 
     .nav-right .user-icon {
         display: block;
