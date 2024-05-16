@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f5f5fa; /* Light lavender background */
             margin: 0;
             padding: 0;
             display: flex;
@@ -18,10 +18,35 @@
 
         header {
             width: 100%;
-            background-color: #004d00;
+            background-color: #6a1b9a; /* Dark purple background */
             color: white;
-            padding: 20px 0;
+            padding: 10px 0;
             text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
         }
 
         .header-title {
@@ -30,8 +55,14 @@
             margin: 0;
         }
 
+        .container {
+            margin-top: 70px; /* Offset for fixed header */
+            width: 90%;
+            max-width: 1200px;
+        }
+
         h1 {
-            color: #333;
+            color: #6a1b9a; /* Dark purple text */
             margin: 20px 0;
         }
 
@@ -49,14 +80,14 @@
             font-size: 18px;
             border: none;
             border-radius: 5px;
-            background-color: #4CAF50;
+            background-color: #8e24aa; /* Purple button */
             color: white;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #7b1fa2; /* Darker purple on hover */
             transform: translateY(-2px);
         }
 
@@ -93,9 +124,29 @@
         }
 
         .team-member h2 {
-            color: #333;
+            color: #6a1b9a; /* Dark purple text */
             font-size: 20px;
             margin: 10px 0 5px;
+        }
+
+        .about-section,
+        .services-section,
+        .testimonials-section {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .about-section h2,
+        .services-section h2,
+        .testimonials-section h2 {
+            color: #6a1b9a; /* Dark purple text */
+            margin-bottom: 20px;
         }
 
         .feedback-section {
@@ -109,7 +160,7 @@
         }
 
         .feedback-section h2 {
-            color: #333;
+            color: #6a1b9a; /* Dark purple text */
             margin-bottom: 20px;
         }
 
@@ -137,82 +188,90 @@
             font-size: 18px;
             border: none;
             border-radius: 5px;
-            background-color: #4CAF50;
+            background-color: #8e24aa; /* Purple button */
             color: white;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
         }
 
         .feedback-section button:hover {
-            background-color: #45a049;
+            background-color: #7b1fa2; /* Darker purple on hover */
             transform: translateY(-2px);
         }
 
         footer {
             width: 100%;
-            background-color: #004d00;
+            background-color: #6a1b9a; /* Dark purple background */
             color: white;
             text-align: center;
             padding: 20px 0;
+            margin-top: 40px;
         }
 
         footer p {
             margin: 5px 0;
         }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #ccc;
+        }
+
     </style>
 </head>
 <body>
     <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
         <div class="header-title">SCM Project</div>
     </header>
-    <h1>Choose a service:</h1>
-    <div class="button-container">
-        <button onclick="window.location.href='youtube.html'">Go to YouTube</button>
-        <button onclick="window.location.href='netflix.html'">Go to Netflix</button>
-        <button onclick="window.location.href='spotifyclone.html'">Go to Spotify Clone</button>
-        <button onclick="window.location.href='prime.html'">Go to Prime</button>
-    </div>
-    
-    <div class="team-section">
-        <div class="team-member">
-            <img src="path/to/jaskaran.jpg" alt="Jaskaran Singh">
-            <h2>Jaskaran Singh</h2>
-        </div>
-        <div class="team-member">
-            <img src="path/to/kanika.jpg" alt="Kanika">
-            <h2>Kanika</h2>
-        </div>
-        <div class="team-member">
-            <img src="path/to/nimarpreet.jpg" alt="Nimarpreet Singh">
-            <h2>Nimarpreet Singh</h2>
-        </div>
-        <div class="team-member">
-            <img src="path/to/ishita.jpg" alt="Ishita Singla">
-            <h2>Ishita Singla</h2>
-        </div>
-    </div>
 
-    <div class="feedback-section">
-        <h2>Feedback</h2>
-        <form action="#">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <div class="container">
+        <section id="home">
+            <h1>Choose a service:</h1>
+            <div class="button-container">
+                <button onclick="window.location.href='youtube.html'">Go to YouTube</button>
+                <button onclick="window.location.href='netflix.html'">Go to Netflix</button>
+                <button onclick="window.location.href='spotifyclone.html'">Go to Spotify Clone</button>
+                <button onclick="window.location.href='prime.html'">Go to Prime</button>
+            </div>
+        </section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <p>This SCM project is developed to demonstrate the integration of various services and teamwork. Our dedicated team has worked tirelessly to bring you seamless navigation between popular platforms.</p>
+        </section>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+        <section id="services" class="services-section">
+            <h2>Our Services</h2>
+            <p>We offer links to various services including YouTube, Netflix, Spotify, and Prime. Each service is handled by our skilled team members, ensuring a smooth user experience.</p>
+        </section>
 
-            <button type="submit">Submit Feedback</button>
-        </form>
-    </div>
-
-    <footer>
-        <p>Main link page - Kanika</p>
-        <p>Netflix homepage, Prime homepage - Nimarpreet Singh</p>
-        <p>Complete Spotify clone - Jaskaran Singh</p>
-        <p>YouTube clone - Ishita Singla</p>
-    </footer>
-</body>
-</html>
+        <section id="team" class="team-section">
+            <div class="team-member">
+                <img src="path/to/jaskaran.jpg" alt="Jaskaran Singh">
+                <h2>Jaskaran Singh</h2>
+            </div>
+            <div class="team-member">
+                <img src="path/to/kanika.jpg" alt="Kanika">
+                <h2>Kanika</h2>
+            </div>
+            <div class="team-member">
+                <img src="path/to/nimarpreet.jpg" alt="Nimarpre
