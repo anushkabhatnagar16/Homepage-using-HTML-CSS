@@ -13,16 +13,21 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            background-color: #004d00;
+            color: white;
+            padding: 20px 0;
             text-align: center;
         }
 
-        .title {
+        .header-title {
             font-size: 36px;
             font-weight: bold;
-            margin-top: 20px;
-            color: #333;
+            margin: 0;
         }
 
         h1 {
@@ -93,23 +98,73 @@
             margin: 10px 0 5px;
         }
 
+        .feedback-section {
+            width: 100%;
+            max-width: 600px;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .feedback-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .feedback-section form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feedback-section label {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .feedback-section input,
+        .feedback-section textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .feedback-section button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .feedback-section button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
         footer {
             width: 100%;
             background-color: #004d00;
             color: white;
             text-align: center;
             padding: 20px 0;
-            margin-top: auto; /* Pushes footer to the bottom */
         }
 
         footer p {
             margin: 5px 0;
         }
-
     </style>
 </head>
 <body>
-    <div class="title">SCM Project</div>
+    <header>
+        <div class="header-title">SCM Project</div>
+    </header>
     <h1>Choose a service:</h1>
     <div class="button-container">
         <button onclick="window.location.href='youtube.html'">Go to YouTube</button>
@@ -135,6 +190,22 @@
             <img src="path/to/ishita.jpg" alt="Ishita Singla">
             <h2>Ishita Singla</h2>
         </div>
+    </div>
+
+    <div class="feedback-section">
+        <h2>Feedback</h2>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
     </div>
 
     <footer>
